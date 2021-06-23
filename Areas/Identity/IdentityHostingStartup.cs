@@ -20,7 +20,7 @@ namespace Recruiter.Areas.Identity
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("AuthRecruiterContextConnection")));
 
-                services.AddDefaultIdentity<RecruiterUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                services.AddDefaultIdentity<RecruiterUser>(options => options.SignIn.RequireConfirmedAccount = false)
                     .AddEntityFrameworkStores<AuthRecruiterContext>();
             });
         }

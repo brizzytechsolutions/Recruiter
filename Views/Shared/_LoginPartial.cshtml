@@ -1,7 +1,9 @@
 ﻿@using Microsoft.AspNetCore.Identity
+@using Recruiter.Areas.Identity.Data
 
-@inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
+@inject SignInManager<RecruiterUser> SignInManager
+@inject UserManager<RecruiterUser> UserManager
+@*@inject UserManager<RecruiterUser> UseManager*@
 
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))
@@ -15,7 +17,7 @@
         </form>
     </li>
 }
-else
+@*else
 {
     <li class="nav-item">
         <a class="nav-link text-dark" id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>
@@ -23,5 +25,5 @@ else
     <li class="nav-item">
         <a class="nav-link text-dark" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
     </li>
-}
+}*@
 </ul>
