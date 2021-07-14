@@ -9,11 +9,11 @@ namespace Recruiter.DataContext
 {
     public class CrudDbContext : DbContext
     {
+        public DbSet<Package> Packages { get; set; }
+
         public CrudDbContext(DbContextOptions<CrudDbContext> options) : base(options)
         {
                 
         }
-
-        public DbSet<Package> Packages { get; set; }
     }
 }
